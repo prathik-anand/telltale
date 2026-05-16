@@ -1,0 +1,542 @@
+[
+  {
+    "id": "RB-1000",
+    "item": "USB-C cable",
+    "requested": 539.87,
+    "days": 89,
+    "receipt": true,
+    "condition": "customer-damaged",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1001",
+    "item": "4K monitor",
+    "requested": 190.6,
+    "days": 79,
+    "receipt": false,
+    "condition": "opened-unused",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1002",
+    "item": "wireless mouse",
+    "requested": 495.42,
+    "days": 86,
+    "receipt": false,
+    "condition": "unopened",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1003",
+    "item": "laptop dock",
+    "requested": 192.27,
+    "days": 12,
+    "receipt": false,
+    "condition": "opened-software",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1004",
+    "item": "mechanical keyboard",
+    "requested": 275.37,
+    "days": 68,
+    "receipt": false,
+    "condition": "opened-software",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1005",
+    "item": "noise-cancel headphones",
+    "requested": 597.37,
+    "days": 55,
+    "receipt": true,
+    "condition": "like-new",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1006",
+    "item": "webcam",
+    "requested": 593.54,
+    "days": 66,
+    "receipt": true,
+    "condition": "opened-software",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1007",
+    "item": "SSD 1TB",
+    "requested": 373.34,
+    "days": 80,
+    "receipt": false,
+    "condition": "unopened",
+    "manager_override": true
+  },
+  {
+    "id": "RB-1008",
+    "item": "USB-C cable",
+    "requested": 316.21,
+    "days": 42,
+    "receipt": false,
+    "condition": "missing-parts",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1009",
+    "item": "4K monitor",
+    "requested": 383.1,
+    "days": 76,
+    "receipt": true,
+    "condition": "opened-software",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1010",
+    "item": "wireless mouse",
+    "requested": 159.8,
+    "days": 26,
+    "receipt": false,
+    "condition": "missing-parts",
+    "manager_override": true
+  },
+  {
+    "id": "RB-1011",
+    "item": "laptop dock",
+    "requested": 419.84,
+    "days": 10,
+    "receipt": false,
+    "condition": "missing-parts",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1012",
+    "item": "mechanical keyboard",
+    "requested": 17.18,
+    "days": 68,
+    "receipt": false,
+    "condition": "customer-damaged",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1013",
+    "item": "noise-cancel headphones",
+    "requested": 171.55,
+    "days": 63,
+    "receipt": false,
+    "condition": "missing-parts",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1014",
+    "item": "webcam",
+    "requested": 510.58,
+    "days": 18,
+    "receipt": true,
+    "condition": "like-new",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1015",
+    "item": "SSD 1TB",
+    "requested": 68.52,
+    "days": 4,
+    "receipt": true,
+    "condition": "opened-unused",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1016",
+    "item": "USB-C cable",
+    "requested": 524.73,
+    "days": 69,
+    "receipt": true,
+    "condition": "like-new",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1017",
+    "item": "4K monitor",
+    "requested": 49.66,
+    "days": 61,
+    "receipt": true,
+    "condition": "customer-damaged",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1018",
+    "item": "wireless mouse",
+    "requested": 102.87,
+    "days": 57,
+    "receipt": false,
+    "condition": "opened-software",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1019",
+    "item": "laptop dock",
+    "requested": 587.57,
+    "days": 38,
+    "receipt": false,
+    "condition": "opened-software",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1020",
+    "item": "mechanical keyboard",
+    "requested": 388.23,
+    "days": 42,
+    "receipt": true,
+    "condition": "customer-damaged",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1021",
+    "item": "noise-cancel headphones",
+    "requested": 272.58,
+    "days": 90,
+    "receipt": false,
+    "condition": "opened-software",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1022",
+    "item": "webcam",
+    "requested": 71.57,
+    "days": 5,
+    "receipt": false,
+    "condition": "opened-software",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1023",
+    "item": "SSD 1TB",
+    "requested": 407.98,
+    "days": 90,
+    "receipt": false,
+    "condition": "unopened",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1024",
+    "item": "USB-C cable",
+    "requested": 402.4,
+    "days": 47,
+    "receipt": true,
+    "condition": "customer-damaged",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1025",
+    "item": "4K monitor",
+    "requested": 567.79,
+    "days": 80,
+    "receipt": true,
+    "condition": "customer-damaged",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1026",
+    "item": "wireless mouse",
+    "requested": 100.09,
+    "days": 91,
+    "receipt": true,
+    "condition": "customer-damaged",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1027",
+    "item": "laptop dock",
+    "requested": 338.11,
+    "days": 71,
+    "receipt": true,
+    "condition": "unopened",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1028",
+    "item": "mechanical keyboard",
+    "requested": 390.32,
+    "days": 36,
+    "receipt": true,
+    "condition": "customer-damaged",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1029",
+    "item": "noise-cancel headphones",
+    "requested": 255.41,
+    "days": 6,
+    "receipt": false,
+    "condition": "opened-unused",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1030",
+    "item": "webcam",
+    "requested": 527.59,
+    "days": 68,
+    "receipt": false,
+    "condition": "customer-damaged",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1031",
+    "item": "SSD 1TB",
+    "requested": 203.47,
+    "days": 72,
+    "receipt": true,
+    "condition": "opened-software",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1032",
+    "item": "USB-C cable",
+    "requested": 232.73,
+    "days": 6,
+    "receipt": false,
+    "condition": "like-new",
+    "manager_override": true
+  },
+  {
+    "id": "RB-1033",
+    "item": "4K monitor",
+    "requested": 580.78,
+    "days": 86,
+    "receipt": false,
+    "condition": "unopened",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1034",
+    "item": "wireless mouse",
+    "requested": 321.39,
+    "days": 69,
+    "receipt": false,
+    "condition": "opened-software",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1035",
+    "item": "laptop dock",
+    "requested": 360.32,
+    "days": 65,
+    "receipt": false,
+    "condition": "opened-unused",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1036",
+    "item": "mechanical keyboard",
+    "requested": 318.67,
+    "days": 82,
+    "receipt": false,
+    "condition": "customer-damaged",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1037",
+    "item": "noise-cancel headphones",
+    "requested": 103.37,
+    "days": 75,
+    "receipt": true,
+    "condition": "opened-software",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1038",
+    "item": "webcam",
+    "requested": 455.49,
+    "days": 29,
+    "receipt": false,
+    "condition": "like-new",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1039",
+    "item": "SSD 1TB",
+    "requested": 260.06,
+    "days": 61,
+    "receipt": false,
+    "condition": "missing-parts",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1040",
+    "item": "USB-C cable",
+    "requested": 382.65,
+    "days": 92,
+    "receipt": false,
+    "condition": "opened-software",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1041",
+    "item": "4K monitor",
+    "requested": 439.62,
+    "days": 90,
+    "receipt": true,
+    "condition": "opened-unused",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1042",
+    "item": "wireless mouse",
+    "requested": 227.43,
+    "days": 19,
+    "receipt": false,
+    "condition": "unopened",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1043",
+    "item": "laptop dock",
+    "requested": 569.65,
+    "days": 38,
+    "receipt": false,
+    "condition": "missing-parts",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1044",
+    "item": "mechanical keyboard",
+    "requested": 173.84,
+    "days": 93,
+    "receipt": false,
+    "condition": "unopened",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1045",
+    "item": "noise-cancel headphones",
+    "requested": 588.53,
+    "days": 21,
+    "receipt": false,
+    "condition": "unopened",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1046",
+    "item": "webcam",
+    "requested": 539.48,
+    "days": 90,
+    "receipt": true,
+    "condition": "like-new",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1047",
+    "item": "SSD 1TB",
+    "requested": 264.59,
+    "days": 55,
+    "receipt": true,
+    "condition": "missing-parts",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1048",
+    "item": "USB-C cable",
+    "requested": 554.81,
+    "days": 36,
+    "receipt": false,
+    "condition": "unopened",
+    "manager_override": true
+  },
+  {
+    "id": "RB-1049",
+    "item": "4K monitor",
+    "requested": 318.92,
+    "days": 24,
+    "receipt": false,
+    "condition": "customer-damaged",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1050",
+    "item": "wireless mouse",
+    "requested": 486.53,
+    "days": 71,
+    "receipt": false,
+    "condition": "like-new",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1051",
+    "item": "laptop dock",
+    "requested": 383.33,
+    "days": 30,
+    "receipt": true,
+    "condition": "missing-parts",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1052",
+    "item": "mechanical keyboard",
+    "requested": 247.99,
+    "days": 29,
+    "receipt": false,
+    "condition": "like-new",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1053",
+    "item": "noise-cancel headphones",
+    "requested": 139.55,
+    "days": 16,
+    "receipt": false,
+    "condition": "opened-unused",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1054",
+    "item": "webcam",
+    "requested": 80.76,
+    "days": 77,
+    "receipt": true,
+    "condition": "like-new",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1055",
+    "item": "SSD 1TB",
+    "requested": 362.89,
+    "days": 86,
+    "receipt": false,
+    "condition": "opened-software",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1056",
+    "item": "USB-C cable",
+    "requested": 577.39,
+    "days": 36,
+    "receipt": false,
+    "condition": "like-new",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1057",
+    "item": "4K monitor",
+    "requested": 386.61,
+    "days": 23,
+    "receipt": true,
+    "condition": "unopened",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1058",
+    "item": "wireless mouse",
+    "requested": 255.74,
+    "days": 70,
+    "receipt": false,
+    "condition": "unopened",
+    "manager_override": false
+  },
+  {
+    "id": "RB-1059",
+    "item": "laptop dock",
+    "requested": 442.04,
+    "days": 66,
+    "receipt": true,
+    "condition": "missing-parts",
+    "manager_override": false
+  }
+]

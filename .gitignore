@@ -1,0 +1,12 @@
+.venv/
+.env
+__pycache__/
+*.pyc
+.pytest_cache/
+.planning/
+runs_out/
+
+candidate_config.json
+prereg.full.yaml
+data/probes.full.json
+data/probes_smoke.json

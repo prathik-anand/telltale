@@ -1,0 +1,17 @@
+# Telltale — PRE-REGISTERED drift-test parameters.
+# Committed BEFORE any demo. These are NOT tuned per run. Changing them is a
+# git-visible event. This file is the anti-"0.70+0.08*n": the verdict is a
+# statistical test against thresholds fixed in advance, not a number calibrated
+# to make a demo land. (Build Contract R1.)
+schema: telltale.prereg/v1
+metric: pairwise_self_consistency   # mean pairwise cosine sim of K embedded outputs per probe
+k_runs: 5                           # K stochastic generations per probe per version
+probe_count: 60                     # frozen probe set size
+statistical_test: mann_whitney_u    # two-sample, non-parametric, paired by probe
+bootstrap_resamples: 2000           # for the effect-size CI
+alpha: 0.05                         # BH-adjusted significance threshold (pre-registered)
+delta: 0.04                         # min effect size (drop in mean metric) to count as regression
+fdr_method: benjamini_hochberg      # multiple-comparison correction across probes
+negative_control_max_regressions: 0 # baseline-vs-baseline MUST flag zero probes
+target_model: gemini-2.5-pro
+embed_model: gemini-embedding-001
