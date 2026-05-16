@@ -29,7 +29,7 @@ real **Test Cloud** run; a regression opens a **Maestro Case** with a human gate
 ```bash
 python -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt
 cp .env.example .env            # then put your Gemini API key in .env
-python -m telltale.probes       # freeze the 60-probe set
+python -m telltale.probes       # freeze the probe set
 python make_change.py --kind prompt          # produce a candidate (or --kind temp/model/custom)
 python -m telltale.run --candidate candidate_config.json
 # -> runs_out/verdict.json : regressed probes, p-values, effect sizes, negative-control status
@@ -37,6 +37,19 @@ python -m telltale.run --candidate candidate_config.json
 
 `GEMINI_API_KEY` (Google AI Studio) powers both the target agent (`gemini-2.5-pro`)
 and the embeddings (`gemini-embedding-001`) — one key.
+
+**Scale & pre-registration (read this — it's the integrity claim).** The committed runs
+used **24 frozen probes × K=4** (`prereg.yaml`). That sample size was a deliberate,
+git-visible cost reduction for the Gemini free tier — committed *before* the runs and
+**never** changed afterward. What was *not* touched is the part that decides the
+verdict: `alpha=0.05`, `delta=0.04`, the Mann-Whitney+Benjamini-Hochberg test, and the
+negative control are byte-identical across git history (commit `527a7d0`, before the
+evidence commit `bd6aa8b` — verify: `git log --oneline --reverse` then
+`git show 527a7d0:prereg.yaml`). Larger N is documented runway, not a credibility hole:
+sample size is a power knob; the decision rule is the thing you pre-register, and it is
+fixed. Plain-English: Telltale runs each probe many times through both versions, embeds
+the real answers, and asks one statistical question — *did the answer distribution shift
+more than chance and by more than a threshold I committed to in advance?*
 
 ## What's real vs. pending
 
