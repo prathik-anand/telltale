@@ -1,0 +1,17 @@
+{
+  "schema": "telltale.maestro_case/v1",
+  "target_baseline": "baseline",
+  "candidate": "cand-prompt",
+  "probes": 24,
+  "k_runs": 4,
+  "prereg": {
+    "alpha": 0.05,
+    "delta": 0.04
+  },
+  "negative_control_passed": true,
+  "regressed_count": 0,
+  "regressed_probes": [],
+  "verdict": "NO_REGRESSION",
+  "human_gate": "N/A",
+  "note": "Negative control must pass for the verdict to be trusted. alpha/delta are pre-registered in prereg.yaml."
+}

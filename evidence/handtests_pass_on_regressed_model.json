@@ -1,0 +1,9 @@
+{
+  "regressed_model": "gemini-2.5-flash",
+  "handtest": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "detail": []
+  }
+}

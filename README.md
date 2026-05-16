@@ -51,3 +51,18 @@ and the embeddings (`gemini-embedding-001`) — one key.
 
 Python · Gemini 2.5 Pro + Gemini embeddings · numpy/scipy (Mann-Whitney, bootstrap,
 Benjamini-Hochberg) · UiPath Maestro + Test Cloud (platform path). Authored with Claude Code.
+
+## Results — real runs (not staged)
+
+Two real runs on Gemini 2.5 Pro, pre-registered `alpha=0.05 delta=0.04` (committed before the runs), 24 frozen probes × K4. Evidence: [`evidence/`](evidence/).
+
+| Change a dev might ship | Hand-written tests | Telltale verdict | Negative control |
+|---|---|---|---|
+| Prompt tweak ("be concise, lenient") | pass | **NO_REGRESSION** (no false alarm) | passed |
+| Model downgrade `gemini-2.5-pro → 2.5-flash` | **5/5 PASS** | **REGRESSION_DETECTED — 10/24 probes** (p_adj≈0.034) | passed |
+
+The hand-written suite passes on the downgraded model; Telltale's pre-registered statistical
+test catches the semantic regression it misses. The negative control (baseline-vs-baseline)
+flagged zero on every run — the detector does not cry wolf. That pairing — a true negative
+and a true positive, with a passing control — is the integrity claim, demonstrable from
+`evidence/`, not asserted.

@@ -1,0 +1,108 @@
+{
+  "schema": "telltale.maestro_case/v1",
+  "target_baseline": "baseline",
+  "candidate": "cand-model",
+  "probes": 24,
+  "k_runs": 4,
+  "prereg": {
+    "alpha": 0.05,
+    "delta": 0.04
+  },
+  "negative_control_passed": true,
+  "regressed_count": 10,
+  "regressed_probes": [
+    {
+      "probe_id": "RB-1002",
+      "baseline_mean": 0.991941,
+      "candidate_mean": 0.93887,
+      "effect": 0.053071,
+      "u_p_value": 0.026519,
+      "p_adjusted": 0.033601,
+      "regressed": true
+    },
+    {
+      "probe_id": "RB-1004",
+      "baseline_mean": 0.994895,
+      "candidate_mean": 0.947928,
+      "effect": 0.046967,
+      "u_p_value": 0.026519,
+      "p_adjusted": 0.033601,
+      "regressed": true
+    },
+    {
+      "probe_id": "RB-1007",
+      "baseline_mean": 0.994312,
+      "candidate_mean": 0.941373,
+      "effect": 0.052939,
+      "u_p_value": 0.029401,
+      "p_adjusted": 0.033601,
+      "regressed": true
+    },
+    {
+      "probe_id": "RB-1008",
+      "baseline_mean": 0.978585,
+      "candidate_mean": 0.910979,
+      "effect": 0.067606,
+      "u_p_value": 0.028571,
+      "p_adjusted": 0.033601,
+      "regressed": true
+    },
+    {
+      "probe_id": "RB-1009",
+      "baseline_mean": 0.986804,
+      "candidate_mean": 0.924987,
+      "effect": 0.061817,
+      "u_p_value": 0.029401,
+      "p_adjusted": 0.033601,
+      "regressed": true
+    },
+    {
+      "probe_id": "RB-1010",
+      "baseline_mean": 0.997628,
+      "candidate_mean": 0.918015,
+      "effect": 0.079613,
+      "u_p_value": 0.029401,
+      "p_adjusted": 0.033601,
+      "regressed": true
+    },
+    {
+      "probe_id": "RB-1011",
+      "baseline_mean": 0.983143,
+      "candidate_mean": 0.913411,
+      "effect": 0.069733,
+      "u_p_value": 0.028571,
+      "p_adjusted": 0.033601,
+      "regressed": true
+    },
+    {
+      "probe_id": "RB-1013",
+      "baseline_mean": 0.990208,
+      "candidate_mean": 0.922386,
+      "effect": 0.067821,
+      "u_p_value": 0.029401,
+      "p_adjusted": 0.033601,
+      "regressed": true
+    },
+    {
+      "probe_id": "RB-1016",
+      "baseline_mean": 0.982658,
+      "candidate_mean": 0.937265,
+      "effect": 0.045393,
+      "u_p_value": 0.028571,
+      "p_adjusted": 0.033601,
+      "regressed": true
+    },
+    {
+      "probe_id": "RB-1018",
+      "baseline_mean": 0.988992,
+      "candidate_mean": 0.850676,
+      "effect": 0.138316,
+      "u_p_value": 0.028571,
+      "p_adjusted": 0.033601,
+      "regressed": true
+    }
+  ],
+  "verdict": "REGRESSION_DETECTED",
+  "human_gate": "AWAITING_APPROVAL",
+  "note": "Negative control must pass for the verdict to be trusted. alpha/delta are pre-registered in prereg.yaml."
+}
