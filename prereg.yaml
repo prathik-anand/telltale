@@ -5,8 +5,8 @@
 # to make a demo land. (Build Contract R1.)
 schema: telltale.prereg/v1
 metric: pairwise_self_consistency   # mean pairwise cosine sim of K embedded outputs per probe
-k_runs: 5                           # K stochastic generations per probe per version
-probe_count: 60                     # frozen probe set size
+k_runs: 4                           # sample size (power/cost) — reduced pre-run; integrity = neg-control + fixed alpha/delta
+probe_count: 24                     # frozen subset for tractable real run on pro free-tier
 statistical_test: mann_whitney_u    # two-sample, non-parametric, paired by probe
 bootstrap_resamples: 2000           # for the effect-size CI
 alpha: 0.05                         # BH-adjusted significance threshold (pre-registered)
