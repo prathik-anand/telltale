@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><title>Telltale</title>
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  body{width:1920px;min-height:1080px;background:#0A0E14;color:#E4E7EB;
+    font-family:Inter,system-ui,Arial,sans-serif;-webkit-font-smoothing:antialiased;padding:54px 110px}
+  .mono{font-family:"JetBrains Mono",ui-monospace,"Courier New",monospace}
+  header{display:flex;align-items:baseline;gap:24px;margin-bottom:10px}
+  h1{font-size:46px;font-weight:800;letter-spacing:-1px}
+  .tag{font-size:24px;color:#8B96A8}
+  .sub{font-size:22px;color:#8B96A8;margin-bottom:34px}
+  .row{display:flex;gap:26px}
+  .card{background:#0d1320;border:1px solid #243043;border-radius:14px;padding:26px 30px}
+  .grow{flex:1}
+  .k{font-size:18px;letter-spacing:3px;text-transform:uppercase;color:#7DD3FC;margin-bottom:12px}
+  .agent{font-size:24px;line-height:1.5;color:#cfe3ff}
+  .agent b{color:#fff}
+  .change{display:flex;align-items:center;gap:16px;margin:20px 0 28px;font-size:24px}
+  .pill{background:#1b2740;border:1px solid #2f4060;border-radius:999px;padding:8px 18px;color:#FBBF24}
+  .pill.pro{color:#7DD3FC}
+  button{font-size:28px;font-weight:700;background:#7DD3FC;color:#06121c;border:0;border-radius:12px;
+    padding:20px 46px;cursor:pointer}
+  button:disabled{opacity:.55}
+  #status{font-size:24px;color:#8B96A8;margin-top:22px;min-height:34px}
+  .verdict{font-size:64px;font-weight:800;margin:10px 0}
+  .reg{color:#F87171}.noreg{color:#34D399}
+  .big{font-size:40px;font-weight:700}
+  .dim{color:#6b7a90}.g{color:#34D399}.rd{color:#F87171}
+  table{width:100%;border-collapse:collapse;font-size:22px;margin-top:14px}
+  td,th{padding:12px 10px;border-bottom:1px solid #1c2535;text-align:left}
+  th{color:#8B96A8;font-size:18px;letter-spacing:2px;text-transform:uppercase}
+  .badge{display:inline-block;background:#0f2a1c;color:#34D399;border:1px solid #1f5a3a;
+    border-radius:8px;padding:6px 14px;font-size:20px}
+  .hide{display:none}
+  .hero{font-size:26px;line-height:1.6;color:#C7CED8;margin-top:10px}
+  .hero b{color:#7DD3FC}
+</style>
+</head>
+<body>
+  <header><h1>Telltale</h1><div class="tag">a smoke alarm for AI agents that doesn't cry wolf</div></header>
+  <div class="sub">Your AI agent passes every test you wrote — and still broke production yesterday.</div>
+
+  <div class="row">
+    <div class="card grow">
+      <div class="k">the agent under test</div>
+      <div class="agent">A refund-policy adjudicator on <b>Gemini&nbsp;2.5&nbsp;Pro</b>.<br>
+        Its hand-written test suite: <span class="g">passing</span>.</div>
+      <div class="change">
+        <span class="dim">change a dev ships:</span>
+        <span class="pill pro">gemini-2.5-pro</span> <span class="dim">→</span>
+        <span class="pill">gemini-2.5-flash</span>
+        <span class="dim">(cheaper)</span>
+      </div>
+      <div class="agent dim">Hard tests still pass on the downgrade. Nothing tells you it got worse.</div>
+      <button id="run" onclick="go()">▶ Run Telltale</button>
+      <div id="status"></div>
+    </div>
+
+    <div class="card grow">
+      <div class="k">the verdict — full pre-registered run (real, 24 probes × K4)</div>
+      <div class="verdict reg" id="ev_md">—</div>
+      <div class="big"><span class="dim">hand-written suite on the downgraded model:</span> <span class="g">5 / 5 PASS</span></div>
+      <div class="big" style="margin-top:8px"><span class="dim">prompt-tweak control:</span> <span class="noreg" id="ev_pt">—</span> <span class="dim">(true negative — no false alarm)</span></div>
+      <div style="margin-top:18px"><span class="badge">negative control passed · every run</span></div>
+      <div class="dim" style="margin-top:10px">α=0.05 δ=0.04 committed to git <i>before</i> the runs — the verdict is the data's, not ours.</div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:26px">
+    <div class="k">proof it's real — run it live right now (small N, real Gemini, not a recording)</div>
+    <div id="pending" class="hero">This isn't a slide. Press <b>Run Telltale</b> and it makes
+      <b>real Gemini calls</b> through both model versions and runs the same pre-registered
+      test, live. (A handful of probes — enough to prove the pipeline is genuine, not the
+      full 24-probe statistical power above.) No mock; no key → it fails closed.</div>
+    <div id="result" class="hide">
+      <div id="vbig" class="verdict"></div>
+      <div id="vline" class="big"></div>
+      <div id="vctrl" style="margin-top:14px"></div>
+      <div class="dim" style="margin-top:10px">Live = a few probes (low power by design — the
+        headline 10/24 above is the full pre-registered run). What this proves: the engine
+        truly executes on real model output, here, now.</div>
+    </div>
+  </div>
+
+<script>
+async function ev(){
+  try{const r=await fetch('/api/evidence');const d=await r.json();
+    const md=d.model_downgrade, pt=d.prompt_tweak;
+    if(md) document.getElementById('ev_md').textContent=md.verdict+' — '+md.regressed_count+'/'+md.probes+' probes';
+    if(pt) document.getElementById('ev_pt').textContent=pt.verdict;
+  }catch(e){}
+}
+async function go(){
+  const b=document.getElementById('run'); b.disabled=true;
+  const s=document.getElementById('status');
+  s.textContent='Running real Gemini probes through both versions… (this is a live call, not a replay)';
+  try{
+    const r=await fetch('/api/run',{method:'POST'});
+    const d=await r.json();
+    if(d.error){ s.textContent='Fail-closed: '+d.detail; b.disabled=false; return; }
+    document.getElementById('pending').classList.add('hide');
+    const res=document.getElementById('result'); res.classList.remove('hide');
+    const reg=d.verdict==='REGRESSION_DETECTED';
+    const vb=document.getElementById('vbig');
+    vb.textContent=d.verdict; vb.className='verdict '+(reg?'reg':'noreg');
+    document.getElementById('vline').textContent=d.regressed_count+' / '+d.probes+
+      ' probes regressed · live · '+d.model;
+    document.getElementById('vctrl').innerHTML=
+      '<span class="badge">negative_control_passed: '+d.negative_control_passed+
+      '</span> &nbsp; <span class="dim">α='+d.prereg.alpha+' δ='+d.prereg.delta+' · pre-registered</span>';
+    s.textContent='Done — computed live from real Gemini outputs + real embeddings.';
+  }catch(e){ s.textContent='error: '+e; b.disabled=false; }
+}
+ev();
+</script>
+</body>
+</html>
